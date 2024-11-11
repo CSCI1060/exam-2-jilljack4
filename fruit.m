@@ -3,13 +3,14 @@ function [] = fruit(N)
         d2 = (rem(i, 2) == 0);
         d5 = (rem(i, 5) == 0);
         if d2 && d5
-            disp('applebanana');
+             fprintf('applebanana\n');
         elseif d2
-            disp('apple');
+            fprintf('apple\n');
         elseif d5
-            disp('banana');
+            fprintf('banana\n');
         else
-            disp(i);
+            fprintf('%d\n', i);
         end
     end
 end
+
