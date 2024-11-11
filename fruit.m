@@ -1,7 +1,15 @@
-function [] = fruit( N )
-% This function prints for values from 1 to N:
-% “apple” if the value is divisible by 2
-% “banana” if the value is divisible by 5
-% The number itself if neither is true
-% “applebanana” if both are true
-
+function [] = fruit(N)
+    for i = 1:N
+        d2 = (rem(i, 2) == 0);
+        d5 = (rem(i, 5) == 0);
+        if d2 && d5
+            disp('applebanana');
+        elseif d2
+            disp('apple');
+        elseif d5
+            disp('banana');
+        else
+            disp(i);
+        end
+    end
+end
